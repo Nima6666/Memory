@@ -1,0 +1,71 @@
+* {
+  user-select: none;
+  font-family: "Gamja Flower", sans-serif;
+}
+body {
+  margin: 0px;
+  background-color: rgba(82, 57, 57, 0.3);
+}
+
+#header {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(90, 92, 211);
+  color: white;
+}
+
+.scoreBoard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  margin-bottom: 50px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.scoreBoard > h3 {
+  font-size: 1.3rem;
+}
+
+.Images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  gap: 50px;
+}
+
+.Images > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Images > div > img {
+  box-shadow: -5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 28vw;
+  pointer-events: none;
+  background-color: burlywood;
+}
+.Images > div > p {
+  pointer-events: none;
+  position: absolute;
+  width: 20vw;
+  bottom: 100px;
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.3rem;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
