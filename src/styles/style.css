@@ -22,24 +22,54 @@ body {
   justify-content: space-around;
   align-items: baseline;
   font-size: 1.5rem;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.4);
   color: white;
   margin-bottom: 50px;
   padding: 20px;
   backdrop-filter: blur(5px);
 }
 
-.scoreBoard > h3 {
-  font-size: 1.3rem;
+.image {
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+.scores {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.currentScore {
+  background-color: darkgreen;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px darkgreen;
+}
+
+.highScore {
+  background-color: yellowgreen;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px green;
+}
+
+.imageContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .Images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   gap: 50px;
+  width: 50%;
 }
 
 .Images > div {
@@ -51,16 +81,15 @@ body {
 }
 
 .Images > div > img {
-  box-shadow: -5px 5px rgba(0, 0, 0, 0.4);
   border-radius: 50%;
-  width: 28vw;
+  width: 150px;
   pointer-events: none;
   background-color: burlywood;
 }
 .Images > div > p {
   pointer-events: none;
   position: absolute;
-  width: 20vw;
+  width: 50%;
   bottom: 100px;
   justify-self: center;
   background-color: rgba(0, 0, 0, 0.4);
@@ -68,4 +97,59 @@ body {
   padding: 5px;
   text-align: center;
   color: white;
+}
+
+#start,
+#end {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+#gameStart {
+  background-color: rgb(6, 82, 6);
+  color: white;
+  border: none;
+  transition: ease all 0.3s;
+  margin-left: 50px;
+  padding: 0pc 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px green;
+}
+
+#again {
+  background-color: rgb(99, 99, 243);
+  padding: 0pc 10px 0px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 50px;
+  border: none;
+  box-shadow: 3px 3px 3px 3px rgb(53, 53, 133);
+  transition: 0.3s ease all;
+}
+
+#again:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px rgb(53, 53, 133);
+}
+
+#again:active {
+  box-shadow: 1px 1px 1px 1px rgb(53, 53, 133);
+}
+
+#gameStart:hover {
+  cursor: pointer;
+  background-color: rgb(25, 187, 25);
+  box-shadow: 2px 2px 2px 2px green;
+}
+
+#gameStart:active {
+  background-color: rgb(125, 238, 125);
+  color: black;
+  box-shadow: 1px 1px 1px 1px rgb(102, 156, 102);
 }
